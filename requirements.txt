@@ -15,10 +15,17 @@ tiktoken
 ollama
 openai
 anthropic
+google-generativeai
 sqlmodel
 keybert
 GitPython
 netlify-py
 Markdown
 xhtml2pdf
+<<<<<<< HEAD
 groq
+=======
+mistralai
+Flask-SocketIO
+eventlet
+>>>>>>> ce9e082ea6aa57e68ae90e1569a0c096651a4f9d

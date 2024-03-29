@@ -20,7 +20,11 @@
   },
   "type": "module",
   "dependencies": {
+<<<<<<< HEAD
     "clsx": "^2.1.0",
+=======
+    "socket.io-client": "^4.7.5",
+>>>>>>> ce9e082ea6aa57e68ae90e1569a0c096651a4f9d
     "xterm": "^5.3.0",
     "xterm-addon-fit": "^0.8.0"
   }

@@ -2,6 +2,7 @@ import toml
 from os import environ
 
 
+
 class Config:
     _instance = None
 
@@ -12,11 +13,12 @@ class Config:
         return cls._instance
 
     def __init__(self):
-        self.config = toml.load("config.toml")
+        self.config = toml.load("sample.config.toml")
 
     def get_config(self):
         return self.config
 
+<<<<<<< HEAD
     def get_bing_api_key(self):
         return environ.get("BING_API_KEY", self.config["API_KEYS"]["BING"])
 
@@ -63,6 +65,55 @@ class Config:
 
     def get_logging_prompts(self):
         return self.config["LOGGING"]["LOG_PROMPTS"] == "true"
+=======
+    def get_google_api_endpoint(self):
+        return self.config["API_ENDPOINTS"]["GOOGLE"]
+
+    def get_google_api_key(self):
+        return self.config["API_KEYS"]["GOOGLE"]
+
+    def get_google_cx(self):
+        return self.config["API_KEYS"]["GOOGLE_CX"]
+
+    def get_bing_api_endpoint(self):
+        return self.config["API_ENDPOINTS"]["BING"]
+
+    def get_bing_api_key(self):
+        return self.config["API_KEYS"]["BING"]
+
+    def get_claude_api_key(self):
+        return self.config["API_KEYS"]["CLAUDE"]
+
+    def get_openai_api_key(self):
+        return self.config["API_KEYS"]["OPENAI"]
+
+    def get_gemini_api_key(self):
+        return self.config["API_KEYS"]["GEMINI"]
+
+    def get_mistral_api_key(self):
+        return self.config["API_KEYS"]["MISTRAL"]
+
+    def get_netlify_api_key(self):
+        return self.config["API_KEYS"]["NETLIFY"]
+
+    def get_sqlite_db(self):
+        return self.config["STORAGE"]["SQLITE_DB"]
+
+    def get_screenshots_dir(self):
+        return self.config["STORAGE"]["SCREENSHOTS_DIR"]
+
+    def get_pdfs_dir(self):
+        return self.config["STORAGE"]["PDFS_DIR"]
+
+    def get_projects_dir(self):
+        return self.config["STORAGE"]["PROJECTS_DIR"]
+
+    def get_logs_dir(self):
+        return self.config["STORAGE"]["LOGS_DIR"]
+
+    def get_repos_dir(self):
+        return self.config["STORAGE"]["REPOS_DIR"]
+>>>>>>> ce9e082ea6aa57e68ae90e1569a0c096651a4f9d
 
     def set_bing_api_key(self, key):
         self.config["API_KEYS"]["BING"] = key
@@ -72,10 +123,13 @@ class Config:
         self.config["API_ENDPOINTS"]["BING"] = endpoint
         self.save_config()
 
+<<<<<<< HEAD
     def set_ollama_api_endpoint(self, endpoint):
         self.config["API_ENDPOINTS"]["OLLAMA"] = endpoint
         self.save_config()
 
+=======
+>>>>>>> ce9e082ea6aa57e68ae90e1569a0c096651a4f9d
     def set_claude_api_key(self, key):
         self.config["API_KEYS"]["CLAUDE"] = key
         self.save_config()
